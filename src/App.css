@@ -1,0 +1,54 @@
+body {
+  background-color: #272c33;
+  display: flex;
+  justify-content: center;
+}
+.App {
+  margin: 10px;
+  border: 3px solid #6ce4f9;
+  border-radius: 5px;
+}
+.ResultBlock {
+  margin: 10px;
+  border: 3px solid #6ce4f9;
+  border-radius: 5px;
+  background-color: #6ce4f9;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+}
+.Result {
+  padding: 10px;
+  font-size: 42px;
+}
+.ResultRed {
+  color: red;
+  padding: 10px;
+  font-size: 42px;
+}
+
+.ButtonBlock {
+  margin: 10px;
+  border: 3px solid #6ce4f9;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+.ButtonInc {
+  font-size: 20px;
+  margin: 10px;
+  border: 1px solid #6ce4f9;
+  border-radius: 5px;
+  background-color: #6ce4f9;
+  font-weight: 700;
+}
+.ButtonReset {
+  font-size: 20px;
+  margin: 10px;
+  border: 1px solid #6ce4f9;
+  border-radius: 5px;
+  background-color: #6ce4f9;
+  font-weight: 700;
+}
