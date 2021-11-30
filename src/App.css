@@ -4,6 +4,10 @@ body {
   justify-content: center;
 }
 .App {
+  display: flex;
+}
+
+.Counter {
   margin: 10px;
   border: 3px solid #6ce4f9;
   border-radius: 5px;
@@ -17,7 +21,9 @@ body {
   font-weight: 700;
   display: flex;
   justify-content: center;
-  width: 200px;
+  align-items: center;
+  width: 400px;
+  height: 100px;
 }
 .Result {
   padding: 10px;
@@ -36,7 +42,7 @@ body {
   display: flex;
   justify-content: space-around;
 }
-.ButtonInc {
+.Button {
   font-size: 20px;
   margin: 10px;
   border: 1px solid #6ce4f9;
@@ -51,4 +57,32 @@ body {
   border-radius: 5px;
   background-color: #6ce4f9;
   font-weight: 700;
+}
+
+.Setter {
+  margin: 10px;
+  border: 3px solid #6ce4f9;
+  border-radius: 5px;
+}
+.SetterInputs {
+  display: flex;
+  flex-direction: column;
+  color: #6ce4f9;
+  margin: 10px;
+  border: 3px solid #6ce4f9;
+  border-radius: 5px;
+  background-color: #272c33;
+  font-size: 20px;
+  font-weight: 700;
+  justify-content: center;
+  width: 400px;
+}
+
+.SetterInputs input {
+  width: 100px;
+}
+.InputElement {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
