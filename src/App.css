@@ -16,7 +16,8 @@ body {
   margin: 10px;
   border: 3px solid #6ce4f9;
   border-radius: 5px;
-  background-color: #6ce4f9;
+  background-color: #272c33;
+  color: #fff;
   font-size: 20px;
   font-weight: 700;
   display: flex;
@@ -85,4 +86,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+}
+
+.setButtons {
 }

@@ -1,24 +1,30 @@
 import React, {useState} from "react";
 
-const Counter = () => {
+type CounterPropsType = {
+    maxValue: number
+    startValue: number
+}
 
-    const [count, setCount] = useState<number>(0)
 
-    const countClassName = count >= 5 ? "ResultRed" : "Result"
+const Counter: React.FC<CounterPropsType> = ({startValue, maxValue}) => {
+
+    const countClassName = startValue >= 5 ? "ResultRed" : "Result"
+
+    const [counterValue, setCounterValue] = useState(startValue)
 
     return (
         <div className="Counter">
             <div className="ResultBlock">
-                <div className={countClassName}>{count}</div>
+                <div className={countClassName}>{counterValue}</div>
             </div>
             <div className='ButtonBlock'>
                 <button className='Button'
-                        disabled={count === 5}
-                        onClick={() => setCount(count + 1)}>inc
+                        disabled={counterValue === maxValue}
+                        onClick={() => setCounterValue(counterValue+1)}>inc
                 </button>
                 <button className='Button'
-                        disabled={count === 0}
-                        onClick={() => setCount(0)}>reset
+                        disabled={counterValue == 0}
+                        onClick={() => setCounterValue(startValue)}>reset
                 </button>
             </div>
         </div>
