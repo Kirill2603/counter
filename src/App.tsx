@@ -1,30 +1,35 @@
-import React, {useState} from 'react';
+import React, {ChangeEvent, useState} from 'react';
 import './App.css';
-import Counter from "./componets/counter";
-import Setter from "./componets/setter";
+import s from './counter/counter.module.css'
+import SetterInput from "./counter/setterInput";
+import CounterOutput from "./counter/counterOutput";
+
 
 function App() {
 
-    let [startValue, setStartValue] = useState<number>(0)
-    let [maxValue, setMaxValue] = useState<number>(5)
+    const [startValue, setStartValue] = useState<number>(0)
+    const [maxValue, setMaxValue] = useState<number>(5)
+    const [count, setCount] = useState<number>(startValue)
 
-    function setCounterValue () {
+    const onSetValues = () => {
         setStartValue(startValue)
         setMaxValue(maxValue)
+        setCount(startValue)
     }
 
     return (
-        <div className="App">
-            <Setter
-                setMaxValue={setMaxValue}
+        <div className={s.App}>
+            <SetterInput
                 setStartValue={setStartValue}
-                setCounterValue={setCounterValue}
+                setMaxValue={setMaxValue}
+                onSetValues={onSetValues}
                 startValue={startValue}
                 maxValue={maxValue}/>
-
-            <Counter
-                startValue={startValue}
-                maxValue={maxValue}/>
+            <CounterOutput
+                maxValue={maxValue}
+                count={count}
+                setCount={setCount}
+                startValue={startValue} />
         </div>
     );
 }
